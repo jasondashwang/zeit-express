@@ -1,1 +1,13 @@
-{"version":2,"name":"zeit-express","builds":[{"src":"**/*.js","use":"@now/node"}]}
+{
+  "version":2,
+  "name":"zeit-express",
+  "builds":[
+    {"src":"index.js","use":"@now/node"},
+    {"src": "about/index.js", "use":"@now/node"}
+  ],
+  "build": {
+    "env": {
+      "DATABASE_STRING": "@database-secret"
+    }
+  }
+}
